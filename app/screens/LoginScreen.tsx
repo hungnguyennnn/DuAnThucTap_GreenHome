@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import CustomTextInput from '../components/CustomTextInput';
 import { loginUser } from '../redux/actions/authActions';
 import { RootState, AppDispatch } from '../redux/store/store';
+import { useNavigation } from 'expo-router';
 
 const LoginScreen = (props: any) => {
   const dispatch = useDispatch<AppDispatch>();
@@ -27,6 +28,8 @@ const LoginScreen = (props: any) => {
   const [saveAccountImage, setSaveAccountImage] = useState(
     require('../../assets/images/tickIcon.png')
   );
+
+  const nav = useNavigation();
 
   useEffect(() => {
     const loadAccount = async () => {
@@ -71,10 +74,10 @@ const LoginScreen = (props: any) => {
   const loginButton = async () => {
     const result = await dispatch(loginUser({ email, password, saveAccount }));
     const payload = result.payload as LoginPayload | undefined;
-    // if (payload && payload.role === 'admin') {
-    //   navigation.navigate('Admin');
-    //   return;
-    // }
+    if (payload && payload.role === 'admin') {
+      navigation.navigate('Admin');
+      return;
+    }
     if (payload) {
       navigation.navigate('Tab', { screen: 'Home' });
     }
