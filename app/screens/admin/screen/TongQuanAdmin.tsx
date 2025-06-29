@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Image, ActivityIndicator, TextInput, FlatList, Modal, Alert } from 'react-native';
 import { Stack } from 'expo-router';
@@ -19,229 +20,241 @@ import { fetchStats } from '../services/thongke';
 
 export default function TongQuanAdmin() {
   const [activeSection, setActiveSection] = useState('products');
-const [productType, setProductType] = useState<'plant' | 'plantpot' | 'accessory'>('plant'); // Chỉ còn 3 giá trị
-const [plants, setPlants] = useState<Product[]>([]);
-const [plantpots, setPlantpots] = useState<Product[]>([]);
-const [accessories, setAccessories] = useState<Product[]>([]);
-const [loading, setLoading] = useState(true);
-const [userCount, setUserCount] = useState(0);
-const [orders, setOrders] = useState<Order[]>([]);
-const [searchQuery, setSearchQuery] = useState('');
-const [modalVisible, setModalVisible] = useState(false);
-const [isEditMode, setIsEditMode] = useState(false);
-const [currentProduct, setCurrentProduct] = useState<Product | null>(null);
-const [totalRevenue, setTotalRevenue] = useState<string>("0đ");
+  // FIX 1: Đổi về 'plant' thay vì 'plants' để khớp với type từ backend
+  const [productType, setProductType] = useState<'plant' | 'plantpot' | 'accessory'>('plant');
+  const [plants, setPlants] = useState<Product[]>([]);
+  const [plantpots, setPlantpots] = useState<Product[]>([]);
+  const [accessories, setAccessories] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [userCount, setUserCount] = useState(0);
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [currentProduct, setCurrentProduct] = useState<Product | null>(null);
+  const [totalRevenue, setTotalRevenue] = useState<string>("0đ");
 
-// Dữ liệu form
-const [formData, setFormData] = useState<FormData>({
-  id: '',
-  name: '',
-  price: '',
-  image: '',
-  quantity: '0',
-  lightPreference: 'Ưa sáng',
-  type: 'plant' // phải khớp với type mới
-});
-
-// Tải dữ liệu khi component mount
-useEffect(() => {
-  loadAllData();
-
-}, []);
-
-// Tải dữ liệu sản phẩm, đơn hàng, thống kê
-const loadAllData = async () => {
-  setLoading(true);
-
-  const productData = await fetchProducts(); 
-
-  // Phân loại sản phẩm giống như ManageProductsScreen
-  setPlants(productData.filter(p => p.type === 'plant'));
-  setPlantpots(productData.filter(p => p.type === 'plantpot' || p.type === 'pot'));
-  setAccessories(productData.filter(p => p.type === 'accessory'));
-
-  const orderData = await fetchOrders();
-  setOrders(orderData);
-
-  const revenue = calculateTotalRevenue(orderData);
-  setTotalRevenue(revenue);
-
-  const statsData = await fetchStats(productData.length);
-  setUserCount(statsData.userCount);
-
-  setLoading(false);
-};
-
-
-// Tính doanh thu
-const calculateTotalRevenue = (orderList: Order[]): string => {
-  let total = 0;
-  orderList.forEach(order => {
-    const price = parseInt(order.totalPrice.replace(/[^\d]/g, ''), 10);
-    if (!isNaN(price)) total += price;
-  });
-  return total.toLocaleString('vi-VN') + 'đ';
-};
-
-// Trả về sản phẩm theo loại đang chọn + filter theo search
-const getCurrentProducts = () => {
-  let list: Product[] = [];
-
-  switch (productType) {
-    case 'plant':
-      list = plants;
-      break;
-    case 'plantpot': // nếu có khả năng đến từ FormData
-      list = plantpots;
-      break;
-    case 'accessory':
-      list = accessories;
-      break;
-    default:
-      console.warn('⚠️ Không xác định loại sản phẩm:', productType);
-      list = [...plants, ...plantpots, ...accessories]; // fallback: tất cả
-  }
-
-  return filterProducts(list, searchQuery);
-};
-
-
-// Mở modal thêm
-const handleAddProduct = () => {
-  setIsEditMode(false);
-  setCurrentProduct(null);
-  setFormData({
+  // FIX 2: Cập nhật FormData để khớp với backend
+  const [formData, setFormData] = useState<FormData>({
     id: '',
     name: '',
     price: '',
     image: '',
     quantity: '0',
     lightPreference: 'Ưa sáng',
-    type: productType // Khớp với type
+    type: 'plant' // Khớp với backend type
   });
-  setModalVisible(true);
-};
 
-// Mở modal sửa
-const handleEditProduct = (product: Product) => {
-  setIsEditMode(true);
-  setCurrentProduct(product);
-  setFormData({
-    id: product.id,
-    name: product.name,
-    price: product.price,
-    image: product.image,
-    quantity: product.quantity.toString(),
-    lightPreference: product.lightPreference || 'Ưa sáng',
-    type: product.type // Lưu ý: dùng type ở đây để khớp
-  });
-  setModalVisible(true);
-};
+  // Tải dữ liệu khi component mount
+  useEffect(() => {
+    loadAllData();
+  }, []);
 
-// Xóa sản phẩm
-const handleDeleteProduct = async (product: Product) => {
-  Alert.alert(
-    "Xác nhận xóa",
-    `Bạn có chắc chắn muốn xóa sản phẩm "${product.name}"?`,
-    [
-      { text: "Hủy", style: "cancel" },
-      {
-        text: "Xóa",
-        style: "destructive",
-        onPress: async () => {
-          const success = await deleteProduct(product.id); // không cần truyền type nữa
-          if (success) {
-            loadAllData();
-            Alert.alert("Thành công", "Đã xóa sản phẩm thành công!");
-          } else {
-            Alert.alert("Lỗi", "Không thể xóa sản phẩm. Vui lòng thử lại sau.");
+  // FIX 3: Cập nhật logic phân loại sản phẩm
+  const loadAllData = async () => {
+    setLoading(true);
+    
+    try {
+      const productData = await fetchProducts(); 
+      console.log('📦 Dữ liệu sản phẩm từ API:', productData);
+
+      // Phân loại sản phẩm theo type từ backend
+      const plantsData = productData.filter(p => p.type === 'plant');
+      const plantpotsData = productData.filter(p => p.type === 'plantpot' || p.type === 'pot');
+      const accessoriesData = productData.filter(p => p.type === 'accessory');
+
+      console.log('🌱 Cây cối:', plantsData.length);
+      console.log('🪴 Chậu cây:', plantpotsData.length);
+      console.log('🔧 Phụ kiện:', accessoriesData.length);
+
+      setPlants(plantsData);
+      setPlantpots(plantpotsData);
+      setAccessories(accessoriesData);
+
+      const orderData = await fetchOrders();
+      setOrders(orderData);
+
+      const revenue = calculateTotalRevenue(orderData);
+      setTotalRevenue(revenue);
+
+      const statsData = await fetchStats(productData.length);
+      setUserCount(statsData.userCount);
+
+    } catch (error) {
+      console.error('❌ Lỗi khi tải dữ liệu:', error);
+      Alert.alert('Lỗi', 'Không thể tải dữ liệu. Vui lòng thử lại.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Tính doanh thu
+  const calculateTotalRevenue = (orderList: Order[]): string => {
+    let total = 0;
+    orderList.forEach(order => {
+      const price = parseInt(order.totalPrice.replace(/[^\d]/g, ''), 10);
+      if (!isNaN(price)) total += price;
+    });
+    return total.toLocaleString('vi-VN') + 'đ';
+  };
+
+  // FIX 4: Cập nhật logic lấy sản phẩm hiện tại
+  const getCurrentProducts = () => {
+    let list: Product[] = [];
+
+    switch (productType) {
+      case 'plant':
+        list = plants;
+        break;
+      case 'plantpot':
+        list = plantpots;
+        break;
+      case 'accessory':
+        list = accessories;
+        break;
+      default:
+        console.warn('⚠️ Không xác định loại sản phẩm:', productType);
+        list = [...plants, ...plantpots, ...accessories];
+    }
+
+    console.log(`🔍 Sản phẩm ${productType}:`, list.length);
+    const filtered = filterProducts(list, searchQuery);
+    console.log(`🔍 Sau khi lọc "${searchQuery}":`, filtered.length);
+    
+    return filtered;
+  };
+
+  // Mở modal thêm
+  const handleAddProduct = () => {
+    setIsEditMode(false);
+    setCurrentProduct(null);
+    setFormData({
+      id: '',
+      name: '',
+      price: '',
+      image: '',
+      quantity: '0',
+      lightPreference: 'Ưa sáng',
+      type: productType
+    });
+    setModalVisible(true);
+  };
+
+  // Mở modal sửa
+  const handleEditProduct = (product: Product) => {
+    setIsEditMode(true);
+    setCurrentProduct(product);
+    setFormData({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images?.[0] || product.image,
+      quantity: product.quantity.toString(),
+      lightPreference: product.lightPreference || 'Ưa sáng',
+      type: product.type
+    });
+    setModalVisible(true);
+  };
+
+  // Xóa sản phẩm
+  const handleDeleteProduct = async (product: Product) => {
+    Alert.alert(
+      "Xác nhận xóa",
+      `Bạn có chắc chắn muốn xóa sản phẩm "${product.name}"?`,
+      [
+        { text: "Hủy", style: "cancel" },
+        {
+          text: "Xóa",
+          style: "destructive",
+          onPress: async () => {
+            const success = await deleteProduct(product.id);
+            if (success) {
+              loadAllData();
+              Alert.alert("Thành công", "Đã xóa sản phẩm thành công!");
+            } else {
+              Alert.alert("Lỗi", "Không thể xóa sản phẩm. Vui lòng thử lại sau.");
+            }
           }
         }
-      }
-    ]
-  );
-};
-
-// Lưu sản phẩm (thêm hoặc sửa)
-const handleSaveProduct = async () => {
-  if (!validateProductForm(formData)) return;
-
-  const success = await saveProduct(formData, isEditMode, currentProduct?.id);
-
-  if (success) {
-    loadAllData();
-    setModalVisible(false);
-    Alert.alert(
-      "Thành công",
-      isEditMode ? "Sản phẩm đã được cập nhật!" : "Sản phẩm mới đã được thêm!"
+      ]
     );
-  } else {
-    Alert.alert("Lỗi", "Không thể lưu sản phẩm. Vui lòng thử lại sau.");
-  }
-};
+  };
 
+  // Lưu sản phẩm (thêm hoặc sửa)
+  const handleSaveProduct = async () => {
+    if (!validateProductForm(formData)) return;
+
+    const success = await saveProduct(formData, isEditMode, currentProduct?.id);
+
+    if (success) {
+      loadAllData();
+      setModalVisible(false);
+      Alert.alert(
+        "Thành công",
+        isEditMode ? "Sản phẩm đã được cập nhật!" : "Sản phẩm mới đã được thêm!"
+      );
+    } else {
+      Alert.alert("Lỗi", "Không thể lưu sản phẩm. Vui lòng thử lại sau.");
+    }
+  };
 
   // Thêm hàm filterOrders để lọc đơn hàng theo ID
-const filterOrders = (orders: Order[], query: string): Order[] => {
-  if (!query.trim()) {
-    return orders;
-  }
-  
-  const lowerCaseQuery = query.toLowerCase().trim();
-  
-  return orders.filter(order => 
-    // Lọc theo ID đơn hàng
-    order.id.toLowerCase().includes(lowerCaseQuery) ||
-    // Tùy chọn: lọc thêm theo tên khách hàng
-    order.fullName.toLowerCase().includes(lowerCaseQuery) ||
-    // Tùy chọn: lọc thêm theo số điện thoại
-    order.phoneNumber.includes(lowerCaseQuery)
-  );
-};
-
-  // Render một item trong FlatList
-  const renderProductItem = ({ item }: { item: Product }) => (
-  <View style={styles.productItem}>
-    <Image 
-      source={{ uri: item.images?.[0] || item.image }} 
-      style={styles.productImage} 
-      resizeMode="cover"
-    />
+  const filterOrders = (orders: Order[], query: string): Order[] => {
+    if (!query.trim()) {
+      return orders;
+    }
     
-    <View style={styles.productInfo}>
-      <Text style={styles.productName}>{item.name}</Text>
-      <Text style={styles.productPrice}>{item.price}đ</Text>
-      <Text style={styles.productStock}>Tồn kho: {item.quantity}</Text>
-      <Text style={styles.productDetail}>Kích thước: {item.size || 'Không rõ'}</Text>
-      <Text style={styles.productDetail}>Xuất xứ: {item.origin || 'Không rõ'}</Text>
+    const lowerCaseQuery = query.toLowerCase().trim();
+    
+    return orders.filter(order => 
+      order.id.toLowerCase().includes(lowerCaseQuery) ||
+      order.fullName.toLowerCase().includes(lowerCaseQuery) ||
+      order.phoneNumber.includes(lowerCaseQuery)
+    );
+  };
 
-      {item.type === 'plant' && item.character && (
-        <Text style={styles.productLight}>Tính chất: {item.character}</Text>
-      )}
+  // FIX 5: Cập nhật render product item để hiển thị đúng thông tin
+  const renderProductItem = ({ item }: { item: Product }) => (
+    <View style={styles.productItem}>
+      <Image 
+        source={{ uri: item.images?.[0] || item.image }} 
+        style={styles.productImage} 
+        resizeMode="cover"
+      />
+      
+      <View style={styles.productInfo}>
+        <Text style={styles.productName}>{item.name}</Text>
+        <Text style={styles.productPrice}>{item.price}đ</Text>
+        <Text style={styles.productStock}>Tồn kho: {item.quantity}</Text>
+        <Text style={styles.productDetail}>Kích thước: {item.size || 'Không rõ'}</Text>
+        <Text style={styles.productDetail}>Xuất xứ: {item.origin || 'Không rõ'}</Text>
 
-      {item.new && (
-        <Text style={[styles.productNewTag]}>Mới</Text>
-      )}
+        {item.type === 'plant' && item.character && (
+          <Text style={styles.productLight}>Tính chất: {item.character}</Text>
+        )}
+
+        {item.new && (
+          <Text style={[styles.productNewTag]}>Mới</Text>
+        )}
+      </View>
+
+      <View style={styles.actionButtons}>
+        <TouchableOpacity 
+          style={styles.editButton}
+          onPress={() => handleEditProduct(item)}
+        >
+          <Feather name="edit" size={18} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={styles.deleteButton}
+          onPress={() => handleDeleteProduct(item)}
+        >
+          <Feather name="trash-2" size={18} color="#fff" />
+        </TouchableOpacity>
+      </View>
     </View>
-
-    <View style={styles.actionButtons}>
-      <TouchableOpacity 
-        style={styles.editButton}
-        onPress={() => handleEditProduct(item)}
-      >
-        <Feather name="edit" size={18} color="#fff" />
-      </TouchableOpacity>
-
-      <TouchableOpacity 
-        style={styles.deleteButton}
-        onPress={() => handleDeleteProduct(item)}
-      >
-        <Feather name="trash-2" size={18} color="#fff" />
-      </TouchableOpacity>
-    </View>
-  </View>
-);
-
+  );
 
   // Hiển thị danh sách sản phẩm với FlatList và tìm kiếm
   const renderProductList = () => {
@@ -273,7 +286,9 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
           style={styles.flatList}
           showsVerticalScrollIndicator={false}
           ListEmptyComponent={
-            <Text style={styles.emptyText}>Không tìm thấy sản phẩm nào</Text>
+            <Text style={styles.emptyText}>
+              {loading ? 'Đang tải...' : 'Không tìm thấy sản phẩm nào'}
+            </Text>
           }
         />
 
@@ -333,14 +348,14 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
       <View style={styles.sectionContent}>
         <Text style={styles.sectionTitle}>Quản Lý Đơn Hàng</Text>
         <View style={styles.searchContainerDn}>
-            <TextInput
-              style={styles.searchInput}
-              placeholder="Tìm kiếm..."
-              value={searchQuery}
-              onChangeText={setSearchQuery}
-            />
-            <Feather name="search" size={18} color="#666" style={styles.searchIcon} />
-          </View>
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Tìm kiếm..."
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+          />
+          <Feather name="search" size={18} color="#666" style={styles.searchIcon} />
+        </View>
         {loading ? (
           <ActivityIndicator size="large" color="#007537" style={styles.loader} />
         ) : (
@@ -408,7 +423,8 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
       </View>
     );
   };
-// Thêm hàm xử lý cập nhật trạng thái đơn hàng
+
+  // Thêm hàm xử lý cập nhật trạng thái đơn hàng
   const handleUpdateOrderStatus = async (order: Order) => {
     const newStatus = order.status === 'pending' ? 'completed' : 'pending';
     
@@ -427,7 +443,6 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
             const success = await updateOrderStatus(order.id, newStatus);
             
             if (success) {
-              // Tải lại dữ liệu đơn hàng
               const orderData = await fetchOrders();
               setOrders(orderData);
               
@@ -447,6 +462,7 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
       ]
     );
   };
+
   // Render nội dung cho tab thống kê
   const renderStatsContent = () => {
     return (
@@ -471,13 +487,10 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
           </View>
         </View>
         
-        {/* Thêm thẻ để hiển thị tổng doanh thu */}
         <View style={styles.revenueCard}>
           <Text style={styles.revenueLabel}>Tổng doanh thu:</Text>
           <Text style={styles.revenueNumber}>{totalRevenue}</Text>
         </View>
-        
-        {/* Có thể thêm biểu đồ thống kê ở đây nếu cần */}
       </View>
     );
   };
@@ -496,7 +509,7 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
     }
   };
 
-  // Render Modal thêm/sửa sản phẩm
+  // FIX 6: Cập nhật Modal để khớp với backend
   const renderProductModal = () => {
     return (
       <Modal
@@ -522,7 +535,7 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
                   }
                 >
                   <Picker.Item label="Cây" value="plant" />
-                  <Picker.Item label="Chậu" value="pot" />
+                  <Picker.Item label="Chậu" value="plantpot" />
                   <Picker.Item label="Phụ kiện" value="accessory" />
                 </Picker>
               </View>
@@ -544,7 +557,7 @@ const filterOrders = (orders: Order[], query: string): Order[] => {
                 style={styles.formInput}
                 value={formData.price}
                 onChangeText={(text) => setFormData({...formData, price: text})}
-                placeholder="Ví dụ: 250.000đ"
+                placeholder="Ví dụ: 250.000"
                 keyboardType="numeric"
               />
             </View>
