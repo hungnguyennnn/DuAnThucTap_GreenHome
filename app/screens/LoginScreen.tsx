@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import CustomTextInput from '../components/CustomTextInput';
 import { loginUser } from '../redux/actions/authActions';
 import { RootState, AppDispatch } from '../redux/store/store';
-import { useNavigation } from 'expo-router';
 
 const LoginScreen = (props: any) => {
   const dispatch = useDispatch<AppDispatch>();
@@ -28,8 +27,7 @@ const LoginScreen = (props: any) => {
   const [saveAccountImage, setSaveAccountImage] = useState(
     require('../../assets/images/tickIcon.png')
   );
-
-  const nav = useNavigation();
+  
 
   useEffect(() => {
     const loadAccount = async () => {

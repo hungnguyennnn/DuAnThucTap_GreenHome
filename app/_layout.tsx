@@ -26,9 +26,8 @@ import HandbookDetailScreen from './screens/HandbookDetailScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import OrderDetailScreen from './screens/OrderDetailScreen';
 import notificationService from './utils/NotificationService';
-import ManageProductsScreen from './screens/admin/ManageProductsScreen';
-import AddProductScreen from './screens/admin/AddProductScreen';
-import EditProductScreen from './screens/admin/EditProductScreen';
+import TongQuanAdmin from './screens/admin/screen/TongQuanAdmin';
+import TrangChuAdmin from './screens/admin/_layoutAdmin';
 
 // Đảm bảo SplashScreen không tự động ẩn
 SplashScreen.preventAutoHideAsync().catch(() => {
@@ -121,9 +120,7 @@ export default function RootLayout() {
           <Stack.Screen name="HandbookDetail" component={HandbookDetailScreen} />
           <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
           <Stack.Screen name="OrderDetail" component={OrderDetailScreen} />
-          <Stack.Screen name="ManageProducts" component={ManageProductsScreen} />
-          <Stack.Screen name="AddProduct" component={AddProductScreen} />
-          <Stack.Screen name="EditProduct" component={EditProductScreen} />
+          <Stack.Screen name="Admin" component={TrangChuAdmin} />
         </Stack.Navigator>
       </PersistGate>
     </Provider>
