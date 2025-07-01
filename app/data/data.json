@@ -87,6 +87,11 @@
       "id": "CA679",
       "userId": "US900",
       "items": []
+    },
+    {
+      "id": "CA600",
+      "userId": "US257",
+      "items": []
     }
   ],
   "products": [
@@ -101,9 +106,9 @@
       "new": true,
       "type": "plant",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/8dc1/c3fd/4c79faa42e885c9a92c6e6b29666fdf3?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FFz6vrg3heJzGqD5T~qU131PwnKSvB4lqg2RYekeI1PInWeoy727oEsEa4j0iYIFeUekAAeUd-Jr~BUR26WnQOjem0DTJ5hnbIGffF1ivFQUfainR7~WHUdafGp7x4DxSPul44D4inhAr8MGCu2REi~yOTB~LBfB2oQqDHuoojfUJZLaOuMzCw57Bwmk5D8vMqC5svJG3oe1ckk0kIJVZTFPn8ZrhrHvRW-qUXKn7SNraVmExHQix147zlNQRLDdBa8EhVvX4mLNvy1WqdpxWsvNJk1vkg4vRPTVkx7eEflHldiKc1NZY7KhOo0jOCTCjHd5kR3EqwajoyblTuGX6A__",
-        "https://s3-alpha-sig.figma.com/img/8dc1/c3fd/4c79faa42e885c9a92c6e6b29666fdf3?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FFz6vrg3heJzGqD5T~qU131PwnKSvB4lqg2RYekeI1PInWeoy727oEsEa4j0iYIFeUekAAeUd-Jr~BUR26WnQOjem0DTJ5hnbIGffF1ivFQUfainR7~WHUdafGp7x4DxSPul44D4inhAr8MGCu2REi~yOTB~LBfB2oQqDHuoojfUJZLaOuMzCw57Bwmk5D8vMqC5svJG3oe1ckk0kIJVZTFPn8ZrhrHvRW-qUXKn7SNraVmExHQix147zlNQRLDdBa8EhVvX4mLNvy1WqdpxWsvNJk1vkg4vRPTVkx7eEflHldiKc1NZY7KhOo0jOCTCjHd5kR3EqwajoyblTuGX6A__",
-        "https://s3-alpha-sig.figma.com/img/8dc1/c3fd/4c79faa42e885c9a92c6e6b29666fdf3?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FFz6vrg3heJzGqD5T~qU131PwnKSvB4lqg2RYekeI1PInWeoy727oEsEa4j0iYIFeUekAAeUd-Jr~BUR26WnQOjem0DTJ5hnbIGffF1ivFQUfainR7~WHUdafGp7x4DxSPul44D4inhAr8MGCu2REi~yOTB~LBfB2oQqDHuoojfUJZLaOuMzCw57Bwmk5D8vMqC5svJG3oe1ckk0kIJVZTFPn8ZrhrHvRW-qUXKn7SNraVmExHQix147zlNQRLDdBa8EhVvX4mLNvy1WqdpxWsvNJk1vkg4vRPTVkx7eEflHldiKc1NZY7KhOo0jOCTCjHd5kR3EqwajoyblTuGX6A__"
+        "https://www.beardsanddaisies.co.uk/cdn/shop/products/Beards-Daises-27.9.220111copy_800x800.jpg?v=1664959425",
+        "https://www.flowerstation.co.uk/cdn/shop/files/spider-plant-res-brown__30216.1691515154.800.800.jpg?v=1720103432",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ6dXUI9Zn9b9ajZL3kWIahATya4GZHSeKOA&s"
       ]
     },
     {
@@ -111,9 +116,9 @@
       "name": "Song of India",
       "price": "250.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/28d9/bffb/22f7b1d90b3a956129c0034bc73180a5?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZTxgBwXTEgxSoa50Re3wBjYTBpONjJX7scxG2~679NKz90pZAi85oE0OxqbFdBwXrfyd-Uq6d8yh8r1PtM7d8HXXe9JIXVf2mxqG9IcIT2P9gJ-Aegi9Xk24JZj9yqfyfweaFA8Fipyzsx-d1MdGEXPmrQcrtn~v~wwmt~RW~GkCkL0CWmRkS~jlX4YwK800efJ88eb7UH620AYQlUvF7zbv1cvmxBqdKcVsdfONVzPbfx39n4LbMx7152V346jB7ZbWqgouy22Du3hF14gnoewiTtD-cUqWJT9wC-XqmPPQVXEeIh41nDiRUsA1UpavZr-VKqa~lbJ6JUZKMJI9rw__",
-        "https://s3-alpha-sig.figma.com/img/28d9/bffb/22f7b1d90b3a956129c0034bc73180a5?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZTxgBwXTEgxSoa50Re3wBjYTBpONjJX7scxG2~679NKz90pZAi85oE0OxqbFdBwXrfyd-Uq6d8yh8r1PtM7d8HXXe9JIXVf2mxqG9IcIT2P9gJ-Aegi9Xk24JZj9yqfyfweaFA8Fipyzsx-d1MdGEXPmrQcrtn~v~wwmt~RW~GkCkL0CWmRkS~jlX4YwK800efJ88eb7UH620AYQlUvF7zbv1cvmxBqdKcVsdfONVzPbfx39n4LbMx7152V346jB7ZbWqgouy22Du3hF14gnoewiTtD-cUqWJT9wC-XqmPPQVXEeIh41nDiRUsA1UpavZr-VKqa~lbJ6JUZKMJI9rw__",
-        "https://s3-alpha-sig.figma.com/img/28d9/bffb/22f7b1d90b3a956129c0034bc73180a5?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZTxgBwXTEgxSoa50Re3wBjYTBpONjJX7scxG2~679NKz90pZAi85oE0OxqbFdBwXrfyd-Uq6d8yh8r1PtM7d8HXXe9JIXVf2mxqG9IcIT2P9gJ-Aegi9Xk24JZj9yqfyfweaFA8Fipyzsx-d1MdGEXPmrQcrtn~v~wwmt~RW~GkCkL0CWmRkS~jlX4YwK800efJ88eb7UH620AYQlUvF7zbv1cvmxBqdKcVsdfONVzPbfx39n4LbMx7152V346jB7ZbWqgouy22Du3hF14gnoewiTtD-cUqWJT9wC-XqmPPQVXEeIh41nDiRUsA1UpavZr-VKqa~lbJ6JUZKMJI9rw__"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9E8BRSus6FjK_rGaclsdwlDy22sQSWEhY2g&s",
+        "https://res.cloudinary.com/easyplant/image/upload/v1698066055/care/Song_of_India_Dracaena.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWJ3_OpvM6LEmmniFHPEm-ZviGkFr9o_2Vug&s"
       ],
       "size": "Vừa",
       "quantity": 74,
@@ -127,9 +132,9 @@
       "name": "Pink Anthurium",
       "price": "250.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/79db/7216/eefbefecedce13e3099111346323ae5a?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=P1Ym6ydrWUk~2-DJQpvAq5pmnhH830dEnKkBgae4l~F3Zx3bAPf66sDMpn2SIw4hg4sR-Rsp85QMlvpfjLt2g-A3Jwy92rf9B35ksT0gGaCFMfZGZe-b33FFLflDWXNFz0SwrVsFYt7h4RBjRrMosqSvs9Kp4sQxL6zh9C5i2y3KizRxRSlTB~y0-U9b7KWmXxvIlbuemcDclt5SLCbdpQMjhgIboEee5py44qMYxAhGPM7Nau9OLoO2Y-js3k8gt0KPxNFUZiS1WQsY1RzM7k1xkEQomXgNVyVy1l0MOtpKb94fMesbJgyE6UcavKRcl1TouZRuZqgqNV4ppPFrXg__",
-        "https://s3-alpha-sig.figma.com/img/79db/7216/eefbefecedce13e3099111346323ae5a?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=P1Ym6ydrWUk~2-DJQpvAq5pmnhH830dEnKkBgae4l~F3Zx3bAPf66sDMpn2SIw4hg4sR-Rsp85QMlvpfjLt2g-A3Jwy92rf9B35ksT0gGaCFMfZGZe-b33FFLflDWXNFz0SwrVsFYt7h4RBjRrMosqSvs9Kp4sQxL6zh9C5i2y3KizRxRSlTB~y0-U9b7KWmXxvIlbuemcDclt5SLCbdpQMjhgIboEee5py44qMYxAhGPM7Nau9OLoO2Y-js3k8gt0KPxNFUZiS1WQsY1RzM7k1xkEQomXgNVyVy1l0MOtpKb94fMesbJgyE6UcavKRcl1TouZRuZqgqNV4ppPFrXg__",
-        "https://s3-alpha-sig.figma.com/img/79db/7216/eefbefecedce13e3099111346323ae5a?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=P1Ym6ydrWUk~2-DJQpvAq5pmnhH830dEnKkBgae4l~F3Zx3bAPf66sDMpn2SIw4hg4sR-Rsp85QMlvpfjLt2g-A3Jwy92rf9B35ksT0gGaCFMfZGZe-b33FFLflDWXNFz0SwrVsFYt7h4RBjRrMosqSvs9Kp4sQxL6zh9C5i2y3KizRxRSlTB~y0-U9b7KWmXxvIlbuemcDclt5SLCbdpQMjhgIboEee5py44qMYxAhGPM7Nau9OLoO2Y-js3k8gt0KPxNFUZiS1WQsY1RzM7k1xkEQomXgNVyVy1l0MOtpKb94fMesbJgyE6UcavKRcl1TouZRuZqgqNV4ppPFrXg__"
+        "https://seedfella.com/cdn/shop/files/Anthurium-Pink-Plant-1-scaled.jpg?v=1744833170",
+        "https://www.mydomaine.com/thmb/URpW8UzvOEEalTo8oL3y-gFPA74=/2160x0/filters:no_upscale():strip_icc()/pink-anthurium-care-b802cb97ba1646c990f029e6ff279e5f.JPG",
+        "https://nurserylive.com/cdn/shop/products/nurserylive-anthurium-andreanum-princess-amalia-elegance-plant.jpg?v=1634213376"
       ],
       "size": "To",
       "quantity": 24,
@@ -143,9 +148,9 @@
       "name": "Grey Star Calarthea",
       "price": "180.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/c09f/33fd/b43f93e237e85807ef2954921d8acda1?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bQ9quunHQCDNfbOdQ6U3PS2r-2JUF9vzC94bpPDg8fEe7mO3MTexQwZO9uDx~4OOkMySQWxwRcOel8iaG4h253C6Dn7NG3ncDMpQGBsX2SfV57NkLArGgki8~5xi3SUst1wY49JUrS-0X9~RieUhlYxuNj0F9J56NgvUVT5T3J0yzBaxW5s9X046VXA7yb2Iw3K1y892Cl4TwwmLmCKg1Hc5uTI~OIyQbGm~EN6DjpIczbBd6U5xJivzjMPHWJLkiTbqujRo1fbVu-qDvdEoFKZq1dZ18sxFSoF21wxJG7csgRp~yTkE-apUxjkhar-7vVBvHp-4s~9mT7Z7UQIlyQ__",
-        "https://s3-alpha-sig.figma.com/img/c09f/33fd/b43f93e237e85807ef2954921d8acda1?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bQ9quunHQCDNfbOdQ6U3PS2r-2JUF9vzC94bpPDg8fEe7mO3MTexQwZO9uDx~4OOkMySQWxwRcOel8iaG4h253C6Dn7NG3ncDMpQGBsX2SfV57NkLArGgki8~5xi3SUst1wY49JUrS-0X9~RieUhlYxuNj0F9J56NgvUVT5T3J0yzBaxW5s9X046VXA7yb2Iw3K1y892Cl4TwwmLmCKg1Hc5uTI~OIyQbGm~EN6DjpIczbBd6U5xJivzjMPHWJLkiTbqujRo1fbVu-qDvdEoFKZq1dZ18sxFSoF21wxJG7csgRp~yTkE-apUxjkhar-7vVBvHp-4s~9mT7Z7UQIlyQ__",
-        "https://s3-alpha-sig.figma.com/img/c09f/33fd/b43f93e237e85807ef2954921d8acda1?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bQ9quunHQCDNfbOdQ6U3PS2r-2JUF9vzC94bpPDg8fEe7mO3MTexQwZO9uDx~4OOkMySQWxwRcOel8iaG4h253C6Dn7NG3ncDMpQGBsX2SfV57NkLArGgki8~5xi3SUst1wY49JUrS-0X9~RieUhlYxuNj0F9J56NgvUVT5T3J0yzBaxW5s9X046VXA7yb2Iw3K1y892Cl4TwwmLmCKg1Hc5uTI~OIyQbGm~EN6DjpIczbBd6U5xJivzjMPHWJLkiTbqujRo1fbVu-qDvdEoFKZq1dZ18sxFSoF21wxJG7csgRp~yTkE-apUxjkhar-7vVBvHp-4s~9mT7Z7UQIlyQ__"
+        "https://plantsinsights.com/wp-content/uploads/2023/11/philodendron-burle-marx-care.webp",
+        "https://plantsinsights.com/wp-content/uploads/2022/04/calarthea-loeseneri-.webp",
+        "https://plantsinsights.com/wp-content/uploads/2023/10/philodendron-ring-of-fire-care-guide.webp"
       ],
       "size": "Vừa",
       "quantity": 39,
@@ -165,9 +170,9 @@
       "new": true,
       "type": "plant",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/8047/4753/f6b77c65cf58c788b93c40679bded54f?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=qJS9wP5nQuPsmzElmg4b4A-GTbTVBolajyfhKbIYdELU3Fabe-xvsPaX7~-K6sQwVZhgZ2TbThTRE3mwmynYG0xJJ4FiPJjO5V2uOEZtbkd2kGHujp9-3SoBXeRbags4MuWBx7lykhWgZnG6QBqFVMn5t1KtuvZugIxQjWaVmra2XgRLikMZD3A-UbywdOZnW9lBEHzJpar5oE38~SZEAxqH4YjIkY7by0t1n~tq3eVDArEUne50gZl9SesJmAO01lmUscV5aYuIeUWEBhR6lwqkk7gK8zyfvWY9dfJqQogLPQISkXb9pyVZpb-vlUQkp9JWTVy2n8cBBBjfcP7G1Q__ ",
-        "https://s3-alpha-sig.figma.com/img/06d0/3e56/9c487f49bcd92c5b4b79ff2ef6350a4d?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=pyHbptrpOwrQwPc32XSXe02arx55ONWuLQvSRGbneVmkqVnCzWatxDAJcPAhDcb0QdlFVLLwW3zHxwIrrP2xNyJT~YCSdSwu83jiehM0s0bvDP8TS4XivbP-e7bv6ysPLiWigYTVxeeMYlDOhdG92AOIq5pAVu7g0kDC26l2WnM2j7QZHo~UpqyCoxg5z2ril1v9Nzd9Pcecg1662UXB0mFLf-GXrU79NdqMBf0kx2egLxYJf4nr6Ji5mBENro0YGmT6OVObUt6Mn37bu-SPI9JScFkYd3Jo-dXHcdi3Z4ERfhC-D30I6gg5rxVQ7u3hB-Pawa8XfPb8taK7aMQZ0A__",
-        "https://s3-alpha-sig.figma.com/img/9535/a104/47ad12d663100e872d9e3244b91407a8?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=NxR9AL910Xm9rGKROJolbq5a5u0QVs9nR71gzp9eD9L5iHmmwmpTk6MI4Q2MF01lBiBUbvwUYGhKAYnh0OfRxWkXSX1ETb57zqSnZSswf~EVgME~6KmIgqIza0fMTfyr699U46F2KmYNeFsVEmTLhPdWp8MkGoFTJIxcDhV~wJeSbDyt173tQwS5TPO83gAxh3l~0zV88JynB8GfbAlpVwu6YK0b4PDpYjicYYDjsBNY7wERQaC9xY2Xv4yTGyofcyk7hgaXYXTcZMOZvKtE~mA2I~-Umv8cvpCadRxenIaYP2VZwbV4ICuQ7-chQa-C785XnqAsiAxHDNdzIgjptQ__"
+        "https://www.thespruce.com/thmb/xkIv6jeAWqBTneAtCORdweC-4EM=/1503x0/filters:no_upscale():max_bytes(150000):strip_icc()/banana-tree-growing-profile-3269353-04-f45b07821d1d4f2bb3004d1daec0df4e.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkO6g1asc0tAzanqpP8JZfY7Rps0dxGwQvQ&s",
+        "https://exoticanz.com/cdn/shop/products/iStock-1203560697.jpg?v=1663562039&width=1080"
       ]
     },
     {
@@ -175,9 +180,9 @@
       "name": "Sago Palm",
       "price": "120.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/0cad/156b/7ee12cbdfb252e9a30a11b6c27c910e9?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Yqp7U2kzdijzODap7CKSlVuy7HYahruY0L7GSmVtryNoAgtpkHBoqU8i-Orsw8WuLGyLO3aQBbAy0EaDpNHzV5aFv2gmRz5H4WfiHMKw782ozaBmS3PY02Ib9Ned2mABmot0lYQQ9P3tOV5A5WI-arEpp7BwBOPKxz0kT8z7vCg1Tjy79OqPWXCXWT4ZXtb1W2ieiqs7I~jYMcy8-TK5xx7LPI3DzN2zbkfQat~YNzGfyNdtH9IYiuXflk7a6OgeuurZVhtLXmcuDEgy967Jsd~7AoGkVziPKKoJV8YWehfvpkOg~L3fusGfPUmpfJ2MsPzcboq8kvAM-iKxKIAjVA__",
-        "https://s3-alpha-sig.figma.com/img/0cad/156b/7ee12cbdfb252e9a30a11b6c27c910e9?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Yqp7U2kzdijzODap7CKSlVuy7HYahruY0L7GSmVtryNoAgtpkHBoqU8i-Orsw8WuLGyLO3aQBbAy0EaDpNHzV5aFv2gmRz5H4WfiHMKw782ozaBmS3PY02Ib9Ned2mABmot0lYQQ9P3tOV5A5WI-arEpp7BwBOPKxz0kT8z7vCg1Tjy79OqPWXCXWT4ZXtb1W2ieiqs7I~jYMcy8-TK5xx7LPI3DzN2zbkfQat~YNzGfyNdtH9IYiuXflk7a6OgeuurZVhtLXmcuDEgy967Jsd~7AoGkVziPKKoJV8YWehfvpkOg~L3fusGfPUmpfJ2MsPzcboq8kvAM-iKxKIAjVA__",
-        "https://s3-alpha-sig.figma.com/img/0cad/156b/7ee12cbdfb252e9a30a11b6c27c910e9?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Yqp7U2kzdijzODap7CKSlVuy7HYahruY0L7GSmVtryNoAgtpkHBoqU8i-Orsw8WuLGyLO3aQBbAy0EaDpNHzV5aFv2gmRz5H4WfiHMKw782ozaBmS3PY02Ib9Ned2mABmot0lYQQ9P3tOV5A5WI-arEpp7BwBOPKxz0kT8z7vCg1Tjy79OqPWXCXWT4ZXtb1W2ieiqs7I~jYMcy8-TK5xx7LPI3DzN2zbkfQat~YNzGfyNdtH9IYiuXflk7a6OgeuurZVhtLXmcuDEgy967Jsd~7AoGkVziPKKoJV8YWehfvpkOg~L3fusGfPUmpfJ2MsPzcboq8kvAM-iKxKIAjVA__"
+        "https://www.thespruce.com/thmb/WDMMvy-2cbtN4r0U31lYGqfxdk0=/6720x0/filters:no_upscale():max_bytes(150000):strip_icc()/grow-sago-palms-1902770-06-b83d3d47262a499c889900a6c83625f7.jpg",
+        "https://www.thesill.com/cdn/shop/files/the-sill_Large-Sago-Palm_Large_Mexia_Sage_Variant_1.jpg?v=1704265313&width=1445",
+        "https://www.thesill.com/cdn/shop/articles/380b9df553be264aca7a198bda826402048d7cc9-1034x1096.webp?v=1727189545"
       ],
       "size": "Nhỏ",
       "quantity": 50,
@@ -191,9 +196,9 @@
       "name": "Devil's Ivy",
       "price": "300.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/06d0/3e56/9c487f49bcd92c5b4b79ff2ef6350a4d?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=pyHbptrpOwrQwPc32XSXe02arx55ONWuLQvSRGbneVmkqVnCzWatxDAJcPAhDcb0QdlFVLLwW3zHxwIrrP2xNyJT~YCSdSwu83jiehM0s0bvDP8TS4XivbP-e7bv6ysPLiWigYTVxeeMYlDOhdG92AOIq5pAVu7g0kDC26l2WnM2j7QZHo~UpqyCoxg5z2ril1v9Nzd9Pcecg1662UXB0mFLf-GXrU79NdqMBf0kx2egLxYJf4nr6Ji5mBENro0YGmT6OVObUt6Mn37bu-SPI9JScFkYd3Jo-dXHcdi3Z4ERfhC-D30I6gg5rxVQ7u3hB-Pawa8XfPb8taK7aMQZ0A__",
-        "https://s3-alpha-sig.figma.com/img/06d0/3e56/9c487f49bcd92c5b4b79ff2ef6350a4d?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=pyHbptrpOwrQwPc32XSXe02arx55ONWuLQvSRGbneVmkqVnCzWatxDAJcPAhDcb0QdlFVLLwW3zHxwIrrP2xNyJT~YCSdSwu83jiehM0s0bvDP8TS4XivbP-e7bv6ysPLiWigYTVxeeMYlDOhdG92AOIq5pAVu7g0kDC26l2WnM2j7QZHo~UpqyCoxg5z2ril1v9Nzd9Pcecg1662UXB0mFLf-GXrU79NdqMBf0kx2egLxYJf4nr6Ji5mBENro0YGmT6OVObUt6Mn37bu-SPI9JScFkYd3Jo-dXHcdi3Z4ERfhC-D30I6gg5rxVQ7u3hB-Pawa8XfPb8taK7aMQZ0A__",
-        "https://s3-alpha-sig.figma.com/img/06d0/3e56/9c487f49bcd92c5b4b79ff2ef6350a4d?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=pyHbptrpOwrQwPc32XSXe02arx55ONWuLQvSRGbneVmkqVnCzWatxDAJcPAhDcb0QdlFVLLwW3zHxwIrrP2xNyJT~YCSdSwu83jiehM0s0bvDP8TS4XivbP-e7bv6ysPLiWigYTVxeeMYlDOhdG92AOIq5pAVu7g0kDC26l2WnM2j7QZHo~UpqyCoxg5z2ril1v9Nzd9Pcecg1662UXB0mFLf-GXrU79NdqMBf0kx2egLxYJf4nr6Ji5mBENro0YGmT6OVObUt6Mn37bu-SPI9JScFkYd3Jo-dXHcdi3Z4ERfhC-D30I6gg5rxVQ7u3hB-Pawa8XfPb8taK7aMQZ0A__"
+        "https://www.houseplant.co.uk/cdn/shop/files/Golden_Pothos_Devil_s_Ivy_Plant_-_Epipremnum_Pinnatum_Aureum_Scindapsus_Houseplant.jpg?v=1730468349&width=1445",
+        "https://i.guim.co.uk/img/media/8d8fcbd7cd2b1e357f60b5455fe08a27f161772f/0_241_5450_3270/master/5450.jpg?width=700&quality=85&auto=format&fit=max&s=3c94b02e6ca99805be119b0161d8d2b9",
+        "https://www.beardsanddaisies.co.uk/cdn/shop/files/B_D_Day-2-013web_9d874380-da01-4d48-b3b6-bafa6cb92391.jpg?v=1718609153"
       ],
       "size": "To",
       "quantity": 14,
@@ -207,9 +212,9 @@
       "name": "Planta Trắng",
       "price": "250.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/2513/c966/834221fbc31c808dfbb9ba52ad5ef5e4?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=btJpcep0qoGQiglX1ZNqE0ZiE7-x4yhqXsJcOPPIeI~Lppgg0mF2KiFnNtOlAf-UT-AgViYionXj89QFhUbs7MZb9PFqGslJPrNvCmipW0saYdjVOwOKb1VqMYl3y~pePKjxxizZORGfSsrNhxKGQ~dm0rEQme8GcIVBGqNzQPEXCklyyP9VbqjmUTr8QRUOdQaEqTDf1sL2D2TlUxKeXBDhwyNEA2kzJyroYfjCyHssZY7JX3hHFlUsWAh6epNbuihkKdbsWIIdDCyE03yFTjx72ygt-lKoY2Ds8GeLdu4vRkCvPXZlsxExdryuR-kxiUAAOzPv7YkWAcz5hs6Kbg__",
-        "https://s3-alpha-sig.figma.com/img/2513/c966/834221fbc31c808dfbb9ba52ad5ef5e4?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=btJpcep0qoGQiglX1ZNqE0ZiE7-x4yhqXsJcOPPIeI~Lppgg0mF2KiFnNtOlAf-UT-AgViYionXj89QFhUbs7MZb9PFqGslJPrNvCmipW0saYdjVOwOKb1VqMYl3y~pePKjxxizZORGfSsrNhxKGQ~dm0rEQme8GcIVBGqNzQPEXCklyyP9VbqjmUTr8QRUOdQaEqTDf1sL2D2TlUxKeXBDhwyNEA2kzJyroYfjCyHssZY7JX3hHFlUsWAh6epNbuihkKdbsWIIdDCyE03yFTjx72ygt-lKoY2Ds8GeLdu4vRkCvPXZlsxExdryuR-kxiUAAOzPv7YkWAcz5hs6Kbg__",
-        "https://s3-alpha-sig.figma.com/img/2513/c966/834221fbc31c808dfbb9ba52ad5ef5e4?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=btJpcep0qoGQiglX1ZNqE0ZiE7-x4yhqXsJcOPPIeI~Lppgg0mF2KiFnNtOlAf-UT-AgViYionXj89QFhUbs7MZb9PFqGslJPrNvCmipW0saYdjVOwOKb1VqMYl3y~pePKjxxizZORGfSsrNhxKGQ~dm0rEQme8GcIVBGqNzQPEXCklyyP9VbqjmUTr8QRUOdQaEqTDf1sL2D2TlUxKeXBDhwyNEA2kzJyroYfjCyHssZY7JX3hHFlUsWAh6epNbuihkKdbsWIIdDCyE03yFTjx72ygt-lKoY2Ds8GeLdu4vRkCvPXZlsxExdryuR-kxiUAAOzPv7YkWAcz5hs6Kbg__"
+        "https://9xgarden.com/wp-content/uploads/2022/09/y-nghia-dac-diem-cay-9x-garden-4-6.jpg",
+        "https://9xgarden.com/wp-content/uploads/2022/09/cach-cham-soc-cay-mon-trang-9x-garden-1.jpg",
+        "https://bizweb.dktcdn.net/thumb/1024x1024/100/340/551/products/18-12-of-15-copy.jpg?v=1660661019507"
       ],
       "size": "Nhỏ",
       "quantity": 12,
@@ -221,9 +226,9 @@
       "name": "Planta Lemon Balm",
       "price": "250.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/740c/be92/30d0e9ed9212eaa46291bb0045a45840?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PAveNZEg9Q0pHq3ygQ78VruX9B1gckFwFu~JIdF30wfBF7SwWQIeJazII9rqpvqx1e29byRceslEQyEQyUXaoys-wL067V0vJE9HTRNu0WNJSC7IINkfUpf0wYKEG13cwXCPtQELlg5RnAz-j1QzcDqrcvFsBMjmMhUEYo5CaMnj7-PN7Ty2q~hSkZ4fU2LwywpaKYunz23F2XJUqsFWIeE7~y3FWwpmLzVi1Kpt-xh3clo~4vY9Cp9qZYOLWdE-~gcEiOD8XjRI13-EEVbGcz0TJ-xPA4FhQ2icFlAHeuO1cQISkpLhHv2ivamc2dkyZ3HH7EX9NQ2Cp0qhGh1eOg__",
-        "https://s3-alpha-sig.figma.com/img/740c/be92/30d0e9ed9212eaa46291bb0045a45840?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PAveNZEg9Q0pHq3ygQ78VruX9B1gckFwFu~JIdF30wfBF7SwWQIeJazII9rqpvqx1e29byRceslEQyEQyUXaoys-wL067V0vJE9HTRNu0WNJSC7IINkfUpf0wYKEG13cwXCPtQELlg5RnAz-j1QzcDqrcvFsBMjmMhUEYo5CaMnj7-PN7Ty2q~hSkZ4fU2LwywpaKYunz23F2XJUqsFWIeE7~y3FWwpmLzVi1Kpt-xh3clo~4vY9Cp9qZYOLWdE-~gcEiOD8XjRI13-EEVbGcz0TJ-xPA4FhQ2icFlAHeuO1cQISkpLhHv2ivamc2dkyZ3HH7EX9NQ2Cp0qhGh1eOg__",
-        "https://s3-alpha-sig.figma.com/img/740c/be92/30d0e9ed9212eaa46291bb0045a45840?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PAveNZEg9Q0pHq3ygQ78VruX9B1gckFwFu~JIdF30wfBF7SwWQIeJazII9rqpvqx1e29byRceslEQyEQyUXaoys-wL067V0vJE9HTRNu0WNJSC7IINkfUpf0wYKEG13cwXCPtQELlg5RnAz-j1QzcDqrcvFsBMjmMhUEYo5CaMnj7-PN7Ty2q~hSkZ4fU2LwywpaKYunz23F2XJUqsFWIeE7~y3FWwpmLzVi1Kpt-xh3clo~4vY9Cp9qZYOLWdE-~gcEiOD8XjRI13-EEVbGcz0TJ-xPA4FhQ2icFlAHeuO1cQISkpLhHv2ivamc2dkyZ3HH7EX9NQ2Cp0qhGh1eOg__"
+        "https://product.hstatic.net/200000385233/product/bac-ha-chanh-8_7797d8b6edf540f295e14ce0af6f4c20_grande.jpg",
+        "hhttps://m.media-amazon.com/images/I/81yrtynVfYL._AC_SL1500_.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbBP99MpTT9ht3cJquAIWPBo3vFluEp_dIoA&s"
       ],
       "size": "Vừa",
       "quantity": 20,
@@ -235,9 +240,9 @@
       "name": "Planta Rosewood",
       "price": "150.000",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/ff1e/1ba8/1d4b4a5e1f83ad7d7c6a746d9c7677b8?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=UvaHVrJAMhumQ5DCq8oMNI8e7thEUAW7R5BLwZLpROmyTfLlOYgUz-hW~byGTta4epzojt0rvUC8yamlhSNYKVfwaf5XLPnVxzv9zLYV4R2glzxTH3KDhAfri9goEMueIj1QSVzg20MMQkFMzqMNTAVvpNATgaN0HwSlYO68RaN8b1VWwnkYKJrudWFdqRpByUiw~~q7Jzf4-fMJ6LsxBEAkxB1flzvKHpEEU5uhQGB50bGAruKvAr0oi7a5UdiCo9fLW5j0N1H8fUvaKXeS4NKx0vYmNWZwp8VGH4Iao~PYQIroMVyziMyeuvyeRRybyCJbwIMJXFKLL69xhgXBHw__",
-        "https://s3-alpha-sig.figma.com/img/ff1e/1ba8/1d4b4a5e1f83ad7d7c6a746d9c7677b8?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=UvaHVrJAMhumQ5DCq8oMNI8e7thEUAW7R5BLwZLpROmyTfLlOYgUz-hW~byGTta4epzojt0rvUC8yamlhSNYKVfwaf5XLPnVxzv9zLYV4R2glzxTH3KDhAfri9goEMueIj1QSVzg20MMQkFMzqMNTAVvpNATgaN0HwSlYO68RaN8b1VWwnkYKJrudWFdqRpByUiw~~q7Jzf4-fMJ6LsxBEAkxB1flzvKHpEEU5uhQGB50bGAruKvAr0oi7a5UdiCo9fLW5j0N1H8fUvaKXeS4NKx0vYmNWZwp8VGH4Iao~PYQIroMVyziMyeuvyeRRybyCJbwIMJXFKLL69xhgXBHw__",
-        "https://s3-alpha-sig.figma.com/img/ff1e/1ba8/1d4b4a5e1f83ad7d7c6a746d9c7677b8?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=UvaHVrJAMhumQ5DCq8oMNI8e7thEUAW7R5BLwZLpROmyTfLlOYgUz-hW~byGTta4epzojt0rvUC8yamlhSNYKVfwaf5XLPnVxzv9zLYV4R2glzxTH3KDhAfri9goEMueIj1QSVzg20MMQkFMzqMNTAVvpNATgaN0HwSlYO68RaN8b1VWwnkYKJrudWFdqRpByUiw~~q7Jzf4-fMJ6LsxBEAkxB1flzvKHpEEU5uhQGB50bGAruKvAr0oi7a5UdiCo9fLW5j0N1H8fUvaKXeS4NKx0vYmNWZwp8VGH4Iao~PYQIroMVyziMyeuvyeRRybyCJbwIMJXFKLL69xhgXBHw__"
+        "https://sudospaces.com/thichtrongcay/2020/10/small-plant-palm-rosewood-pot-4.jpg",
+        "https://caylaygo.com/wp-content/uploads/2020/05/CD9B9F6D-3868-464B-AB5A-D95DD96AC323.jpeg",
+        "https://www.cayantrai.org/wp-content/uploads/2018/01/IMG_5282.jpg"
       ],
       "size": "To",
       "quantity": 35,
@@ -255,9 +260,9 @@
       "new": false,
       "type": "accessory",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/508d/4a73/1e689a274cf0d0cacd0620a56d43fb5e?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Tv3P1gej~8YtvKhqtLMQKz1DUQ4FNZ2HT1NTEZsDx85SdHeH1uaQC4oa206e5bJlllZWqndSJkuijwrI0Nu-uTiYl9lJQhyrdCvvzLG~LVr5HYWx1vGDL05vri3SNcvVfgvPN99Jya8I0Y5jZAMeFCyxh5kOXU9nXyEZiysfiYFNQhDgl2-T49LXVisZB4fk7dUG7fsY5ekNpqFJleQt3FmR7bV3IaKSbDzgshm~7NIeqm6bRNghj0iOBUJeprmxStjyV3unR8ZSyWOzkdFXBjdyb8tjjtSnVFkR4ouBAdelvnLvrdsPSOGTKY5dPEyS9mYSWwb2epYZeVMXw00EZw__",
-        "https://s3-alpha-sig.figma.com/img/508d/4a73/1e689a274cf0d0cacd0620a56d43fb5e?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Tv3P1gej~8YtvKhqtLMQKz1DUQ4FNZ2HT1NTEZsDx85SdHeH1uaQC4oa206e5bJlllZWqndSJkuijwrI0Nu-uTiYl9lJQhyrdCvvzLG~LVr5HYWx1vGDL05vri3SNcvVfgvPN99Jya8I0Y5jZAMeFCyxh5kOXU9nXyEZiysfiYFNQhDgl2-T49LXVisZB4fk7dUG7fsY5ekNpqFJleQt3FmR7bV3IaKSbDzgshm~7NIeqm6bRNghj0iOBUJeprmxStjyV3unR8ZSyWOzkdFXBjdyb8tjjtSnVFkR4ouBAdelvnLvrdsPSOGTKY5dPEyS9mYSWwb2epYZeVMXw00EZw__",
-        "https://s3-alpha-sig.figma.com/img/508d/4a73/1e689a274cf0d0cacd0620a56d43fb5e?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Tv3P1gej~8YtvKhqtLMQKz1DUQ4FNZ2HT1NTEZsDx85SdHeH1uaQC4oa206e5bJlllZWqndSJkuijwrI0Nu-uTiYl9lJQhyrdCvvzLG~LVr5HYWx1vGDL05vri3SNcvVfgvPN99Jya8I0Y5jZAMeFCyxh5kOXU9nXyEZiysfiYFNQhDgl2-T49LXVisZB4fk7dUG7fsY5ekNpqFJleQt3FmR7bV3IaKSbDzgshm~7NIeqm6bRNghj0iOBUJeprmxStjyV3unR8ZSyWOzkdFXBjdyb8tjjtSnVFkR4ouBAdelvnLvrdsPSOGTKY5dPEyS9mYSWwb2epYZeVMXw00EZw__"
+        "https://thapxanh.com/images/thumbs/0026897_binh-xit-tuoi-cay-phun-suong-tvc-500-binh-tuoi-phun-hoa-cay-canh-xit-rua-tay-lau-kinh.jpeg",
+        "https://thapxanh.com/images/thumbs/0026898_binh-xit-tuoi-cay-phun-suong-tvc-500-binh-tuoi-phun-hoa-cay-canh-xit-rua-tay-lau-kinh.jpeg",
+        "https://thapxanh.com/images/thumbs/0026900_binh-xit-tuoi-cay-phun-suong-tvc-500-binh-tuoi-phun-hoa-cay-canh-xit-rua-tay-lau-kinh.jpeg"
       ]
     },
     {
@@ -271,9 +276,9 @@
       "new": true,
       "type": "plant",
       "images": [
-        "https://s3-alpha-sig.figma.com/img/c42d/6954/eae96eb7a290d497887bf0ce1ba76f98?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IA7vWgJld1BjYEkb~toFIHGTtACvm-MYg2jMFqdawiZTG5RdOJWHG7ZgM-iC78cptvTNJJTf1HgP9fgcCWZBF~k8QyfUaoLJwOF-An9tcFwoyd7U59N6sIuCzlSAWedK6J8Dam-emC9K5Ptsw-FKLDggZ8fYYuNQdY9IaDADIfCFS6w1JftudpYDigYipk~b7v~m2bqThIs3wvMhIEqxcEq9PSHuBhCW7T-8nTH3wlDPRPPPOrqg~NtxpfF7jvqPsAWRlzK7ZntaE1MhzcS8jXxbIaBl76Mw1BItSbVUy-KExUxxDLqNMPmKrH7N1JB-zwVfB3CZbu6Sv2Ssm5Vj9g__",
-        "https://s3-alpha-sig.figma.com/img/c42d/6954/eae96eb7a290d497887bf0ce1ba76f98?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IA7vWgJld1BjYEkb~toFIHGTtACvm-MYg2jMFqdawiZTG5RdOJWHG7ZgM-iC78cptvTNJJTf1HgP9fgcCWZBF~k8QyfUaoLJwOF-An9tcFwoyd7U59N6sIuCzlSAWedK6J8Dam-emC9K5Ptsw-FKLDggZ8fYYuNQdY9IaDADIfCFS6w1JftudpYDigYipk~b7v~m2bqThIs3wvMhIEqxcEq9PSHuBhCW7T-8nTH3wlDPRPPPOrqg~NtxpfF7jvqPsAWRlzK7ZntaE1MhzcS8jXxbIaBl76Mw1BItSbVUy-KExUxxDLqNMPmKrH7N1JB-zwVfB3CZbu6Sv2Ssm5Vj9g__",
-        "https://s3-alpha-sig.figma.com/img/c42d/6954/eae96eb7a290d497887bf0ce1ba76f98?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IA7vWgJld1BjYEkb~toFIHGTtACvm-MYg2jMFqdawiZTG5RdOJWHG7ZgM-iC78cptvTNJJTf1HgP9fgcCWZBF~k8QyfUaoLJwOF-An9tcFwoyd7U59N6sIuCzlSAWedK6J8Dam-emC9K5Ptsw-FKLDggZ8fYYuNQdY9IaDADIfCFS6w1JftudpYDigYipk~b7v~m2bqThIs3wvMhIEqxcEq9PSHuBhCW7T-8nTH3wlDPRPPPOrqg~NtxpfF7jvqPsAWRlzK7ZntaE1MhzcS8jXxbIaBl76Mw1BItSbVUy-KExUxxDLqNMPmKrH7N1JB-zwVfB3CZbu6Sv2Ssm5Vj9g__"
+        "https://bizweb.dktcdn.net/100/340/551/products/fullsizerender-28-2c5c3ac3-03a1-431f-943f-0f6f20eab18f.jpg?v=1646138380743",
+        "https://nhaxinh.com/wp-content/uploads/2021/10/cay-palm-madag-loai-nho-2.jpg",
+        "https://vn1.vdrive.vn/codai.net/2021/03/cau-tieu-tram-chamaedorea-elegans-parlor-palm-chau-thuy-tinh-2-lop-09.jpg"
       ]
     }
   ],
@@ -363,6 +368,138 @@
       "phone": "0154123456",
       "status": "completed",
       "createdAt": "2025-06-26T15:02:47.408Z"
+    },
+    {
+      "id": "OR1751383102867",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "PL1",
+          "quantity": 1,
+          "price": "240.000",
+          "name": "Spider Plant"
+        }
+      ],
+      "total": 255000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 1,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "pending",
+      "createdAt": "2025-07-01T15:18:22.867Z"
+    },
+    {
+      "id": "OR1751383115148",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "PL1",
+          "quantity": 1,
+          "price": "240.000",
+          "name": "Spider Plant"
+        }
+      ],
+      "total": 255000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 2,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "completed",
+      "createdAt": "2025-07-01T15:18:35.148Z"
+    },
+    {
+      "id": "OR1751387203232",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "AC1",
+          "quantity": 2,
+          "price": "315.000",
+          "name": "Bình tưới Sierra"
+        },
+        {
+          "id": "PP3",
+          "quantity": 3,
+          "price": "150.000",
+          "name": "Planta Rosewood"
+        }
+      ],
+      "total": 1095000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 1,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "pending",
+      "createdAt": "2025-07-01T16:26:43.232Z"
+    },
+    {
+      "id": "OR1751387206579",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "AC1",
+          "quantity": 2,
+          "price": "315.000",
+          "name": "Bình tưới Sierra"
+        },
+        {
+          "id": "PP3",
+          "quantity": 3,
+          "price": "150.000",
+          "name": "Planta Rosewood"
+        }
+      ],
+      "total": 1095000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 2,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "completed",
+      "createdAt": "2025-07-01T16:26:46.579Z"
+    },
+    {
+      "id": "OR1751387305398",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "PL4",
+          "quantity": 2,
+          "price": "180.000",
+          "name": "Grey Star Calarthea"
+        }
+      ],
+      "total": 375000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 2,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "completed",
+      "createdAt": "2025-07-01T16:28:25.398Z"
+    },
+    {
+      "id": "OR1751387434945",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "PL2",
+          "quantity": 1,
+          "price": "250.000",
+          "name": "Song of India"
+        }
+      ],
+      "total": 265000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 2,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "completed",
+      "createdAt": "2025-07-01T16:30:34.945Z"
     }
   ]
 }
