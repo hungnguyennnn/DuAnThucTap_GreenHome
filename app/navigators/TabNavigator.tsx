@@ -1,108 +1,89 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator, BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store/store';
+import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import NotificationScreen from '../screens/NotificationScreen';
-import { Ionicons } from '@expo/vector-icons';
+import ChatScreen from '../screens/Chat';
+import { RootState } from '../redux/store/store';
 
 const Tab = createBottomTabNavigator();
+
+const getIconName = (routeName: string, focused: boolean): string => {
+  switch (routeName) {
+    case 'Home':
+      return focused ? 'home' : 'home-outline';
+    case 'Search':
+      return focused ? 'search' : 'search-outline';
+    case 'Notification':
+      return focused ? 'notifications' : 'notifications-outline';
+    case 'Chat':
+      return focused ? 'chatbubble' : 'chatbubble-outline';
+    case 'Profile':
+      return focused ? 'person' : 'person-outline';
+    default:
+      return 'ellipse-outline';
+  }
+};
+
+const CustomTabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
+  const currentRoute = state.routes[state.index]?.name;
+
+  if (['Cart', 'Chat', 'Payment', 'PaymentSuccess', 'AfterPayment'].includes(currentRoute)) {
+    return null;
+  }
+
+  return (
+    <View style={styles.tabBarContainer}>
+      {state.routes.map((route, index) => {
+        const isFocused = state.index === index;
+
+        const onPress = () => {
+          const event = navigation.emit({
+            type: 'tabPress',
+            target: route.key,
+            canPreventDefault: true,
+          });
+
+          if (!isFocused && !event.defaultPrevented) {
+            navigation.navigate(route.name);
+          }
+        };
+
+        return (
+          <TouchableOpacity key={route.key} style={styles.tabItem} onPress={onPress}>
+            <View style={[styles.iconWrapper, isFocused && styles.activeWrapper]}>
+              <Ionicons
+                name={getIconName(route.name, isFocused)}
+                size={24}
+                color={isFocused ? '#6B4F35' : '#fff'}
+              />
+            </View>
+          </TouchableOpacity>
+        );
+      })}
+    </View>
+  );
+};
 
 const TabNavigator = () => {
   const unreadNotifications = useSelector((state: RootState) => state.payment.unreadNotifications);
 
   return (
     <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarShowLabel: false,
+      tabBar={(props) => <CustomTabBar {...props} />}
+      screenOptions={{
         headerShown: false,
-        tabBarHideOnKeyboard: true,
-        tabBarStyle: styles.tabBarStyle,
-        tabBarActiveTintColor: '#007537',
-        tabBarInactiveTintColor: '#8B8B8B',
-
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName = '';
-          switch (route.name) {
-            case 'Home':
-              iconName = focused ? 'home' : 'home-outline';
-              break;
-            case 'Search':
-              iconName = focused ? 'search' : 'search-outline';
-              break;
-            case 'Notification':
-              iconName = focused ? 'notifications' : 'notifications-outline';
-              break;
-            case 'Profile':
-              iconName = focused ? 'person' : 'person-outline';
-              break;
-            default:
-              iconName = 'home-outline';
-          }
-
-          return <Ionicons name={iconName} size={25} color={color} />;
-        },
-      })}
+      }}
     >
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? 'home' : 'home-outline'}
-              size={24}
-              color={focused ? '#00B761' : '#000'}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Search"
-        component={SearchScreen}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? 'search' : 'search-outline'}
-              size={24}
-              color={focused ? '#00B761' : '#000'}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Notification"
-        component={NotificationScreen}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? 'notifications' : 'notifications-outline'}
-              size={24}
-              color={focused ? '#00B761' : '#000'}
-            />
-          ),
-          tabBarBadge: unreadNotifications > 0 ? unreadNotifications : undefined,
-          tabBarBadgeStyle: {
-            backgroundColor: '#FF3B30',
-          }
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? 'person' : 'person-outline'}
-              size={24}
-              color={focused ? '#00B761' : '#000'}
-            />
-          ),
-        }}
-      />
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Search" component={SearchScreen} />
+      <Tab.Screen name="Notification" component={NotificationScreen} />
+      <Tab.Screen name="Chat" component={ChatScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 };
@@ -110,16 +91,32 @@ const TabNavigator = () => {
 export default TabNavigator;
 
 const styles = StyleSheet.create({
-  tabBarStyle: {
+  tabBarContainer: {
     position: 'absolute',
+    left: 15,
+    right: 15,
     bottom: 0,
-    left: 0,
-    right: 0,
-    elevation: 0,
-    backgroundColor: 'white',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    height: 90,
-    paddingTop: 10,
+    height: 60,
+    flexDirection: 'row',
+    backgroundColor: 'rgba(12, 24, 1, 0.5)',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    borderRadius: 30,
+    paddingHorizontal: 16,
+  },
+  tabItem: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  iconWrapper: {
+    width: 38,
+    height: 38,
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  activeWrapper: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
   },
 });
