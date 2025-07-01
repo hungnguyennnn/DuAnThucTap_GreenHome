@@ -83,7 +83,7 @@ const NotificationScreen = ({navigation}: any) => {
                             styles.status,
                             { color: item.status === 'completed' ? '#28a745' : '#dc3545' }
                         ]}>
-                            {item.status === 'completed' ? 'Đặt hàng thành công' : 'Đã hủy đơn hàng'}
+                            {item.status === 'completed' ? 'Đặt hàng thành công' : 'Đang xử lý'}
                         </Text>
                         <Text style={styles.name}>
                             {item.items[0].name}

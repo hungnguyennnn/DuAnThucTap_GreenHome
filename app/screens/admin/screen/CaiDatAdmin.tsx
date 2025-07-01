@@ -1,22 +1,26 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
-import { router, Stack } from 'expo-router';
+import { router, Stack, useNavigation } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Feather, FontAwesome5, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function CaiDatAdmin() {
-  const handleLogout = async () => {
-    try {
-      await AsyncStorage.removeItem('userId');
-      router.replace('/DangNhap');
-    } catch (error) {
-      console.error('Lỗi khi đăng xuất:', error);
-    }
-  };
 
-  const handleDoanhThu = () => {
-    router.push('/admin/screen/DoanhThu');
-  };
+
+
+export default function CaiDatAdmin(props: any) {
+  const navigation  = useNavigation();
+  const handleLogout = async () => {
+  try {
+    await AsyncStorage.removeItem('userId');
+    navigation.navigate('Login'); // Chuyển
+  } catch (error) {
+    console.error('Lỗi khi đăng xuất:', error);
+  }
+};
+
+ const handleDoanhThu = () => {
+    navigation.navigate('DoanhThu');
+};
 
   return (
     <>

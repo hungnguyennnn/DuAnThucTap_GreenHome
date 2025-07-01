@@ -108,9 +108,7 @@ const PaymentSuccess: React.FC<PaymentSuccessProps> = ({
       if (!orderId) return;
 
       // Cập nhật trạng thái đơn hàng thành completed
-      await api.patch(`/orders/${orderId}`, {
-        status: 'completed'
-      });
+     
 
       // Xóa giỏ hàng sau khi đơn hàng đã hoàn tất
       if (cartId) {

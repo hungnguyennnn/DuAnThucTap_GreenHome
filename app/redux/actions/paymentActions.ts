@@ -79,10 +79,10 @@ export const processPayment = createAsyncThunk(
       // Cập nhật trạng thái đơn hàng thành 'completed'
       const updatedOrder = {
         ...orderResponse.data,
-        status: 'completed'
+        status: 'pending'
       };
       
-      await api.patch(`/orders/${orderId}`, { status: 'completed' });
+      await api.patch(`/orders/${orderId}`, { status: 'pending' });
       
       // Xóa các sản phẩm trong giỏ hàng
       if (cartId) {

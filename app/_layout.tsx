@@ -27,7 +27,10 @@ import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import OrderDetailScreen from './screens/OrderDetailScreen';
 import notificationService from './utils/NotificationService';
 import TongQuanAdmin from './screens/admin/screen/TongQuanAdmin';
+import DoanhThu from './screens/admin/screen/DoanhThu';
 import TrangChuAdmin from './screens/admin/_layoutAdmin';
+
+
 
 // Đảm bảo SplashScreen không tự động ẩn
 SplashScreen.preventAutoHideAsync().catch(() => {
@@ -121,6 +124,9 @@ export default function RootLayout() {
           <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
           <Stack.Screen name="OrderDetail" component={OrderDetailScreen} />
           <Stack.Screen name="Admin" component={TrangChuAdmin} />
+          <Stack.Screen name="TongQuanAdmin" component={TongQuanAdmin} />
+          <Stack.Screen name="DoanhThu" component={DoanhThu} />
+          <Stack.Screen name="TabNavigator" component={TabNavigator} />
         </Stack.Navigator>
       </PersistGate>
     </Provider>
