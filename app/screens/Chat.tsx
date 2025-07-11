@@ -3,6 +3,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { useNavigation } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
+  Image,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
@@ -233,7 +234,11 @@ Người dùng hỏi: "${userMsg.text}"`,
     ]}>
       {!message.isUser && (
         <View style={styles.botAvatar}>
-          <Ionicons name="leaf" size={20} color="#2E7D32" />
+          <Image
+            style={{ width: 36, height: 36, borderRadius: 18 }}
+            resizeMode="cover"
+            source={require('../../assets/images/logo.png')}
+          />
         </View>
       )}
       <View style={[
@@ -264,7 +269,11 @@ Người dùng hỏi: "${userMsg.text}"`,
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <View style={styles.headerAvatar}>
-            <Ionicons name="leaf" size={24} color="#2E7D32" />
+            <Image
+              style={{ width: 44, height: 44, borderRadius: 22 }}
+              resizeMode="cover"  
+              source={require('../../assets/images/logo.png')}
+            />
           </View>
           <View>
             <Text style={styles.headerTitle}>PlantShop Bot</Text>
@@ -317,6 +326,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E8F5E8',
+    marginTop: Platform.OS === 'android' ? 24 : 0, // Adjust for Android status bar
   },
   // Header styles với theme xanh lá
   header: {

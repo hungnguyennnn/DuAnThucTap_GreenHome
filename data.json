@@ -12,48 +12,30 @@
     },
     {
       "id": "US257",
-      "name": "Ly",
-      "email": "khanhly@gmail.com",
-      "password": "Ly123@",
+      "name": "Phương",
+      "email": "test@gmail.com",
+      "password": "test123@",
       "phone": "0963897928",
       "avatar": "",
       "address": "85 Dinh Thon"
     },
     {
       "id": "US956",
-      "name": "Thai 1",
-      "email": "thai@gmail.com",
-      "password": "Thai123@",
+      "name": "Test1",
+      "email": "test1@gmail.com",
+      "password": "Test123@",
       "phone": "0963897928",
       "address": "85 dinh thon, my dinh 2, ha noi",
       "avatar": ""
     },
     {
       "id": "US535",
-      "name": "Pham Hong Thai",
+      "name": "test",
       "email": "t@t.com",
-      "password": "Thai123@",
+      "password": "Test123@",
       "phone": "0963897928",
       "avatar": "",
       "address": "85 Dinh Thon"
-    },
-    {
-      "id": "US717",
-      "name": "Pham Hong Thai",
-      "email": "thaip@gmail.com",
-      "password": "Thai123@",
-      "phone": "0963897928",
-      "address": "85 Dinh Thon",
-      "avatar": ""
-    },
-    {
-      "id": "US900",
-      "name": "Pham Hong Thai",
-      "email": "phamthai@gmail.com",
-      "password": "Thai123@",
-      "phone": "0154123456",
-      "address": "85 Dinh Thon",
-      "avatar": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FASM-8e155349-f102-4746-b409-93cb528dc05a/ImagePicker/a5649ee9-4df9-4aec-9b7b-e88a6ccaeef9.jpeg"
     }
   ],
   "cart": [

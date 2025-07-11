@@ -121,6 +121,7 @@ export default function RootLayout() {
           <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
           <Stack.Screen name="OrderDetail" component={OrderDetailScreen} />
           <Stack.Screen name="Admin" component={TrangChuAdmin} />
+          <Stack.Screen name="TabNavigator" component={TabNavigator} />
         </Stack.Navigator>
       </PersistGate>
     </Provider>
