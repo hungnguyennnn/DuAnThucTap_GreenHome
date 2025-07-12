@@ -1,8 +1,9 @@
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
-
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { useNavigation } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
+  Image,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
@@ -13,6 +14,7 @@ import {
   View
 } from 'react-native';
 
+const genAI = new GoogleGenerativeAI("AIzaSyAauakKip4CAEdknvzI6R2jZboBKMX_JUg");
 
 interface Message {
   id: string;
@@ -83,23 +85,9 @@ const ChatScreen = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'llama3',
-          prompt: `Bạn là chatbot của hệ thống APP PlantShop, một ứng dụng chuyên bán cây cảnh, chậu cây cảnh, dụng cụ chăm sóc cây và cung cấp hướng dẫn trồng, chăm sóc cây xanh.
-
-🎯 Mục tiêu:
-- Trả lời ngắn gọn, thân thiện, sử dụng tiếng Việt.
-- Chỉ đề cập đến nội dung **liên quan đến cây xanh**, bao gồm: giới thiệu cây, đặc điểm, cách chăm sóc, gợi ý sản phẩm, chậu cây, dụng cụ, cách chọn cây phù hợp, mẹo chăm sóc, cách tưới, bón phân, đặt cây trong nhà/văn phòng.
-- Có thể hướng dẫn khách hàng các chức năng như: thêm cây vào giỏ, thanh toán, theo dõi đơn hàng, nhưng vẫn gắn với **việc mua cây hoặc sản phẩm chăm sóc cây**.
-- Không được nói về chủ đề không liên quan đến cây cối.
-
-📦 Dữ liệu có thể sử dụng:
-- Danh sách sản phẩm bao gồm cây cảnh (như "Spider Plant", "Song of India", v.v.), chậu cây (loại "Planta Trắng", v.v.) và dụng cụ (như "Bình tưới Sierra").
-- Truy vấn dữ liệu mẫu từ database (giỏ hàng, sản phẩm mới, đơn hàng...) khi cần gợi ý.
-- Có thể đề xuất cây mới, cây bán chạy hoặc cây theo sở thích (ưa sáng, ưa bóng, theo vùng miền).
-
-👤 Người dùng vừa hỏi: "${userMsg.text}"
-
-👉 Hãy phản hồi ngắn gọn, dễ hiểu, vui vẻ và chỉ nói những gì có ích cho người đang quan tâm đến cây cảnh, sản phẩm chăm sóc cây hoặc cách chăm cây trong hệ thống PlantShop.
-`,
+          prompt: `Bạn là chatbot của hệ thống APP PlantShop. 
+Trả lời ngắn gọn, thân thiện, chỉ gợi ý về vấn đề liên quan đến cây cối, cây trồng, chăm sóc cây và đặc biệt phải sử dụng tiếng Việt.
+Người dùng hỏi: "${userMsg.text}"`,
           stream: false
         })
       });
@@ -246,7 +234,11 @@ const ChatScreen = () => {
     ]}>
       {!message.isUser && (
         <View style={styles.botAvatar}>
-          <Ionicons name="leaf" size={20} color="#2E7D32" />
+          <Image
+            style={{ width: 36, height: 36, borderRadius: 18 }}
+            resizeMode="cover"
+            source={require('../../assets/images/logo.png')}
+          />
         </View>
       )}
       <View style={[
@@ -277,7 +269,11 @@ const ChatScreen = () => {
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <View style={styles.headerAvatar}>
-            <Ionicons name="leaf" size={24} color="#2E7D32" />
+            <Image
+              style={{ width: 44, height: 44, borderRadius: 22 }}
+              resizeMode="cover"  
+              source={require('../../assets/images/logo.png')}
+            />
           </View>
           <View>
             <Text style={styles.headerTitle}>PlantShop Bot</Text>
@@ -330,6 +326,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E8F5E8',
+    marginTop: Platform.OS === 'android' ? 24 : 0, // Adjust for Android status bar
   },
   // Header styles với theme xanh lá
   header: {

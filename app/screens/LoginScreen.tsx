@@ -85,7 +85,7 @@ const LoginScreen = (props: any) => {
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: '#ffffff' }}>
         <StatusBar
           barStyle="dark-content"
           translucent
@@ -94,7 +94,7 @@ const LoginScreen = (props: any) => {
         <Image
           style={styles.imageHeader}
           resizeMode="cover"
-          source={require('../../assets/images/imageHeader.png')}
+          source={require('../../assets/images/logo.png')}
         />
         <View style={styles.body}>
           <Text style={styles.title}>Chào mừng bạn</Text>
@@ -254,6 +254,7 @@ const styles = StyleSheet.create({
   },
   body: {
     padding: 20,
+    backgroundColor: '#ffffff',
   },
   subtTitle: {
     fontSize: 22,
@@ -268,8 +269,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   imageHeader: {
-    marginTop: -150,
-    width: 412,
-    height: 400,
+    width: 300,
+    height: 300,
+    alignSelf: 'center',
   },
 });
