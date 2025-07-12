@@ -75,11 +75,11 @@ const SignUpScreen = (props: any) => {
   };
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: '#ffffff' }}>
       <Image
         style={styles.imageHeader}
         resizeMode="cover"
-        source={require('../../assets/images/imageHeader.png')}
+        source={require('../../assets/images/logores.png')}
       />
       <View style={styles.body}>
         <Text style={styles.title}>Đăng ký</Text>
@@ -252,6 +252,7 @@ const styles = StyleSheet.create({
 
   body: {
     padding: 20,
+    marginTop: 40,
   },
   subtTitle: {
     fontSize: 22,
@@ -266,9 +267,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   imageHeader: {
-    marginTop: -200,
-    width: 412,
-    height: 400,
+    width: 300,
+    height: 150,
+    alignSelf: 'center',
   },
   facebook: {
     marginLeft: 30,
