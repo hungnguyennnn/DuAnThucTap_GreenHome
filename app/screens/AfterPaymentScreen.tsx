@@ -33,7 +33,6 @@ const AfterPayment = ({ navigation, route }: any) => {
   const [cardName, setCardName] = useState<string>('');
   const [expiry, setExpiry] = useState<string>(''); // MM/YY
   const [cvv, setCvv] = useState<string>('');
-
   // State cho thẻ ATM
   const [atmNumber, setAtmNumber] = useState<string>('');
   const [bankName, setBankName] = useState<string>('');

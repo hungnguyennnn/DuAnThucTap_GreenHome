@@ -96,7 +96,6 @@ Người dùng hỏi: "${userMsg.text}"`,
     const data = await response.json();
     console.log("✅ JSON trả về từ Ollama:", data);
       const reply = data.response || 'Xin lỗi, tôi chưa hiểu ý bạn.';
-
       setMessages(prev => prev.map(msg =>
         msg.id === loadingId ? { ...msg, text: reply, timestamp: new Date() } : msg
       ));

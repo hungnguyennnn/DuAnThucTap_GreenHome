@@ -12,45 +12,45 @@
     },
     {
       "id": "US257",
-      "name": "Ly",
-      "email": "khanhly@gmail.com",
-      "password": "Ly123@",
+      "name": "Test111",
+      "email": "test@gmail.com",
+      "password": "Test123@",
       "phone": "0963897928",
-      "avatar": "",
-      "address": "85 Dinh Thon"
+      "address": "85 Dinh Thon",
+      "avatar": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FASM-8e155349-f102-4746-b409-93cb528dc05a/ImagePicker/946ee950-9237-4af6-bd37-0093e5b6013c.jpeg"
     },
     {
       "id": "US956",
-      "name": "Thai 1",
-      "email": "thai@gmail.com",
-      "password": "Thai123@",
+      "name": "Test1",
+      "email": "test1@gmail.com",
+      "password": "Test123@",
       "phone": "0963897928",
       "address": "85 dinh thon, my dinh 2, ha noi",
       "avatar": ""
     },
     {
       "id": "US535",
-      "name": "Pham Hong Thai",
+      "name": "Test2",
       "email": "t@t.com",
-      "password": "Thai123@",
+      "password": "Test123@",
       "phone": "0963897928",
       "avatar": "",
       "address": "85 Dinh Thon"
     },
     {
       "id": "US717",
-      "name": "Pham Hong Thai",
-      "email": "thaip@gmail.com",
-      "password": "Thai123@",
+      "name": "Test3",
+      "email": "test3@gmail.com",
+      "password": "Test123@",
       "phone": "0963897928",
       "address": "85 Dinh Thon",
       "avatar": ""
     },
     {
       "id": "US900",
-      "name": "Pham Hong Thai",
-      "email": "phamthai@gmail.com",
-      "password": "Thai123@",
+      "name": "Test",
+      "email": "test@gmail.com",
+      "password": "Test123@",
       "phone": "0154123456",
       "address": "85 Dinh Thon",
       "avatar": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FASM-8e155349-f102-4746-b409-93cb528dc05a/ImagePicker/a5649ee9-4df9-4aec-9b7b-e88a6ccaeef9.jpeg"
@@ -96,20 +96,13 @@
   ],
   "products": [
     {
-      "id": "PL1",
-      "name": "Spider Plant",
+      "name": "Spider Plant New",
       "price": "240.000",
-      "size": "Nhỏ",
+      "image": "https://www.beardsanddaisies.co.uk/cdn/shop/products/Beards-Daises-27.9.220111copy_800x800.jpg?v=1664959425",
       "quantity": 125,
-      "origin": "Châu Phi",
-      "character": "Ưa bóng",
-      "new": true,
       "type": "plant",
-      "images": [
-        "https://www.beardsanddaisies.co.uk/cdn/shop/products/Beards-Daises-27.9.220111copy_800x800.jpg?v=1664959425",
-        "https://www.flowerstation.co.uk/cdn/shop/files/spider-plant-res-brown__30216.1691515154.800.800.jpg?v=1720103432",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ6dXUI9Zn9b9ajZL3kWIahATya4GZHSeKOA&s"
-      ]
+      "lightPreference": "Ưa sáng",
+      "id": "PL1"
     },
     {
       "id": "PL2",
@@ -266,20 +259,12 @@
       ]
     },
     {
-      "id": "77cf",
-      "name": "Palm",
-      "price": "300.000",
-      "size": "Lớn",
-      "quantity": 15,
-      "origin": "Châu Nam Cực",
-      "character": "Ưa sáng",
-      "new": true,
-      "type": "plant",
-      "images": [
-        "https://bizweb.dktcdn.net/100/340/551/products/fullsizerender-28-2c5c3ac3-03a1-431f-943f-0f6f20eab18f.jpg?v=1646138380743",
-        "https://nhaxinh.com/wp-content/uploads/2021/10/cay-palm-madag-loai-nho-2.jpg",
-        "https://vn1.vdrive.vn/codai.net/2021/03/cau-tieu-tram-chamaedorea-elegans-parlor-palm-chau-thuy-tinh-2-lop-09.jpg"
-      ]
+      "id": "2ac5",
+      "name": "abc",
+      "price": "123456",
+      "image": "aaaa",
+      "quantity": 10,
+      "type": "unknown"
     }
   ],
   "orders": [
@@ -500,6 +485,52 @@
       "phone": "0963897928",
       "status": "completed",
       "createdAt": "2025-07-01T16:30:34.945Z"
+    },
+    {
+      "id": "OR1752329152157",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "PP3",
+          "quantity": 3,
+          "price": "150.000",
+          "name": "Planta Rosewood"
+        }
+      ],
+      "total": 465000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 2,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "pending",
+      "createdAt": "2025-07-12T14:05:52.157Z"
+    },
+    {
+      "id": "OR1752329929383",
+      "userId": "US257",
+      "items": [
+        {
+          "id": "77cf",
+          "quantity": 2,
+          "price": "300.000",
+          "name": "Palm"
+        },
+        {
+          "id": "PL4",
+          "quantity": 3,
+          "price": "180.000",
+          "name": "Grey Star Calarthea"
+        }
+      ],
+      "total": 1155000,
+      "shippingFee": 15000,
+      "deliveryMethod": 1,
+      "payMethod": 2,
+      "address": "85 Dinh Thon",
+      "phone": "0963897928",
+      "status": "completed",
+      "createdAt": "2025-07-12T14:18:49.384Z"
     }
   ]
 }
